@@ -6,7 +6,7 @@ int main()
 	try
 	{
 		Bureaucrat bob("Bob", 75);
-		std::cout << "Created: " << bob.getName() << ", grade " << bob.getGrade() << std::endl;
+		std::cout << bob << std::endl;
 	}
 	catch (std::exception& e)
 	{
@@ -17,7 +17,7 @@ int main()
 	try
 	{
 		Bureaucrat invalid("Invalid", 0);
-		std::cout << "Created: " << invalid.getName() << ", grade " << invalid.getGrade() << std::endl;
+		std::cout << invalid << std::endl;
 	}
 	catch (std::exception& e)
 	{
@@ -28,7 +28,7 @@ int main()
 	try
 	{
 		Bureaucrat invalid("Invalid", 151);
-		std::cout << "Created: " << invalid.getName() << ", grade " << invalid.getGrade() << std::endl;
+		std::cout << invalid << std::endl;
 	}
 	catch (std::exception& e)
 	{
@@ -39,13 +39,13 @@ int main()
 	try
 	{
 		Bureaucrat alice("Alice", 3);
-		std::cout << "Created: " << alice.getName() << ", grade " << alice.getGrade() << std::endl;
+		std::cout << alice << std::endl;
 		alice.incrementGrade();
-		std::cout << "After increment: " << alice.getName() << ", grade " << alice.getGrade() << std::endl;
+		std::cout << alice << std::endl;
 		alice.incrementGrade();
-		std::cout << "After increment: " << alice.getName() << ", grade " << alice.getGrade() << std::endl;
+		std::cout << alice << std::endl;
 		alice.incrementGrade();
-		std::cout << "After increment: " << alice.getName() << ", grade " << alice.getGrade() << std::endl;
+		std::cout << alice << std::endl;
 	}
 	catch (std::exception& e)
 	{
@@ -56,13 +56,13 @@ int main()
 	try
 	{
 		Bureaucrat charlie("Charlie", 148);
-		std::cout << "Created: " << charlie.getName() << ", grade " << charlie.getGrade() << std::endl;
+		std::cout << charlie << std::endl;
 		charlie.decrementGrade();
-		std::cout << "After decrement: " << charlie.getName() << ", grade " << charlie.getGrade() << std::endl;
+		std::cout << charlie << std::endl;
 		charlie.decrementGrade();
-		std::cout << "After decrement: " << charlie.getName() << ", grade " << charlie.getGrade() << std::endl;
+		std::cout << charlie << std::endl;
 		charlie.decrementGrade();
-		std::cout << "After decrement: " << charlie.getName() << ", grade " << charlie.getGrade() << std::endl;
+		std::cout << charlie << std::endl;
 	}
 	catch (std::exception& e)
 	{
@@ -74,8 +74,8 @@ int main()
 	{
 		Bureaucrat top("Top", 1);
 		Bureaucrat bottom("Bottom", 150);
-		std::cout << "Created: " << top.getName() << ", grade " << top.getGrade() << std::endl;
-		std::cout << "Created: " << bottom.getName() << ", grade " << bottom.getGrade() << std::endl;
+		std::cout << top << std::endl;
+		std::cout << bottom << std::endl;
 	}
 	catch (std::exception& e)
 	{
