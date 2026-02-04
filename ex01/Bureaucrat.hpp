@@ -6,7 +6,7 @@
 /*   By: joeyscags <jcupp@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:47:29 by joeyscags         #+#    #+#             */
-/*   Updated: 2026/02/01 18:55:47 by joeyscags        ###   ########.fr       */
+/*   Updated: 2026/02/04 18:19:37 by joeyscags        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <string>
 # include <iostream>
+
+class Form;
 
 class Bureaucrat
 {
@@ -34,6 +36,8 @@ public:
 
 	void				incrementGrade();
 	void				decrementGrade();
+
+	void				signForm(Form& form);
 
 	class GradeTooHighException : public std::exception
 	{
