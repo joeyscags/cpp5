@@ -6,7 +6,7 @@
 /*   By: joeyscags <jcupp@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/01 18:47:29 by joeyscags         #+#    #+#             */
-/*   Updated: 2026/02/04 20:02:09 by joeyscags        ###   ########.fr       */
+/*   Updated: 2026/02/06 12:50:37 by joeyscags        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ public:
 	void				decrementGrade();
 
 	void				signForm(AForm& form);
+	void				executeForm(AForm const & form) const;
 
 	class GradeTooHighException : public std::exception
 	{
