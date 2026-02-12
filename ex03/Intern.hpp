@@ -6,7 +6,7 @@
 /*   By: joeyscags <jcupp@student.42heilbronn.de    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/03 09:15:30 by joeyscags         #+#    #+#             */
-/*   Updated: 2026/02/08 02:04:46 by joeyscags        ###   ########.fr       */
+/*   Updated: 2026/02/08 02:28:02 by joeyscags        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,17 @@ public:
 	~Intern();
 
 	AForm*	makeForm(const std::string& formName, const std::string& target);
+
+private:
+	struct FormFactory
+	{
+		std::string	name;
+		AForm*		(*creator)(const std::string& target);
+	};
+
+	static AForm*	createShrubberyForm(const std::string& target);
+	static AForm*	createRobotomyForm(const std::string& target);
+	static AForm*	createPresidentialForm(const std::string& target);
 };
 
 #endif
